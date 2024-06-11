@@ -68,12 +68,14 @@
 
 <h1>Hotel</h1>
 
-<?
+<ul>
+<?php
 foreach ($hotels as $hotel) {
-    echo "<li>" "Name: " . $hotel["name"] . "</li>"
+    echo "<li>" "Name:" . $hotel["name"] . "</li>";
 
 }
 ?>
+</ul>
 
 
     
