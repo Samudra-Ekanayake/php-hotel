@@ -76,11 +76,6 @@ foreach ($hotels as $hotel) {
     echo "<li>" . "parking:" . $hotel["parking"] . "</li>";
     echo "<li>" . "vote:" . $hotel["vote"] . "</li>";
     echo "<li>" . "distance_to_center:" . $hotel["distance_to_center"] . "</li>";
-
-
-
-
-
 }
 ?>
 </ul>
