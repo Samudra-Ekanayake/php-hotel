@@ -71,7 +71,15 @@
 <ul>
 <?php
 foreach ($hotels as $hotel) {
-    echo "<li>" "Name:" . $hotel["name"] . "</li>";
+    echo "<li>" . "Name:" . $hotel["name"] . "</li>";
+    echo "<li>" . "Description:" . $hotel["Description"] . "</li>";
+    echo "<li>" . "parking:" . $hotel["parking"] . "</li>";
+    echo "<li>" . "vote:" . $hotel["vote"] . "</li>";
+    echo "<li>" . "distance_to_center:" . $hotel["distance_to_center"] . "</li>";
+
+
+
+
 
 }
 ?>
