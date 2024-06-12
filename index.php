@@ -62,22 +62,34 @@ $hotels = [
 
 <body>
 
-    <h1>Hotel</h1>
+    <h1>Lista degli hotel</h1>
 
 
-    <ul>
-        <?php
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Parking</th>
+                <th>Vote</th>
+                <th>Distance to Center (km)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            foreach ($hotels as $hotel) {
+                echo "<tr>";
+                echo "<td>" . $hotel["name"] . "</td>";
+                echo "<td>" . $hotel["description"] . "</td>";
+                echo "<td>" . ($hotel["parking"] ? 'yes' : 'no') . "</td>";
+                echo "<td>" . $hotel["vote"] . "</td>";
+                echo "<td>" . $hotel["distance_to_center"] . "</td>";
+                echo "</tr>";
+            }
+            ?>
+        </tbody>
+    </table>
 
-        foreach ($hotels as $hotel) {
-            echo "<li>" . "Name:" . " " . $hotel["name"] . "</li>";
-            echo "<li>" . "Description:" . " " . $hotel["description"] . "</li>";
-            echo "<li>" . "parking:" . " " . ($hotel["parking"] ? 'yes' : 'no') . "</li>";
-            echo "<li>" . "vote:" . " " . $hotel["vote"] . "</li>";
-            echo "<li>" . "distance_to_center:" . " " . $hotel["distance_to_center"] . " " .  "km" . "</li>";
-            echo "<br>";
-        }
-        ?>
-    </ul>
 
 
 
